@@ -1,0 +1,221 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; Empêche les défilements inutiles */
+}
+
+/* Style pour le tableau de bord */
+.tableau-de-bord {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Style pour le logo */
+.logo img {
+    width: 50px;
+}
+
+/* Style pour le menu */
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Style pour les boutons */
+.boutons button {
+    background-color: #007BFF;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.boutons button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Style pour chaque carré */
+.carre {
+    width: 23%; /* Ajustez la largeur selon vos préférences */
+    height: 100px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Style pour le texte dans chaque carré */
+.texte-carre {
+    position: absolute;
+    bottom: 10px; /* Ajustez la distance depuis le bas de l'image */
+    left: 10px; /* Ajustez la distance depuis la gauche de l'image */
+    right: 10px; /* Ajustez la distance depuis la droite de l'image */
+}
+
+.texte-carre h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.texte-carre p {
+    font-size: 14px;
+    margin: 0;
+}
+
+
+
+/* Style pour la superposition de texte */
+.superposition-texte {
+    text-align: center;
+}
+
+.superposition-texte h3 {
+    color: white;
+    font-size: 18px;
+    margin-top: 230px;
+}
+
+/* Style pour le bouton "Commencer" */
+.bouton-commencer {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #007BFF;
+    cursor: pointer;
+    margin-top: 50px; /* Ajoute de l'espace entre le texte et le bouton */
+}
+
+.bouton-commencer:hover {
+    background-color: #0056b3;
+}
+.div_apropos{
+    background: #007BFF;
+    width: 100%;
+    height: 500px;
+}
+
+.section-accueil {
+    position: relative;
+}
+
+.section-accueil img {
+    width: 100%;
+    height: auto;
+}
+
+.contenu-accueil {
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #65C0FF;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+.contenu-texte {
+    margin-top: 20px;
+}
+.texte-box{
+    background: white;
+    margin: 1px;
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+.texte-box p {
+    font-size: 16px;
+}
+
+.contenu-accueil button.bouton-commencer {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.contenu-accueil button.bouton-commencer:hover {
+    background-color: darkblue;
+}
+
+.section-accueil img {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+}
+
+.superposition-texte {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.superposition-texte h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.bouton-commencer {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Styles pour le bouton Commencer */
+.bouton-commencer:hover {
+    background-color: darkblue;
+}
+
+/* A propos */
+
+.div_apropos{
+    background-color: blue;
+    width: 100%;
+    height: 500px;
+    position:static;
+}
+
+/* .section-accueil img {
+    width: 100%;
+    min-height: 500px;  */
+    /* Hauteur minimale pour garantir le défilement */
+    /* background-size: cover;
+} */
+
+
+/* .div_apropos{
+    background: blue;
+    width: 100%;
+    min-height: 500px;  */
+    /* Hauteur minimale pour garantir le défilement */
+/* } */
