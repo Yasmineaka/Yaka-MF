@@ -76,7 +76,9 @@ body {
 }
 .texte-box p {
     font-size: 16px;
+    padding: 30px;
 }
+
 
 .contenu-accueil button.bouton-commencer {
     background-color: blue;
