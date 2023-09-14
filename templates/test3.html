@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Témoignages</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.testimonial {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 300px;
+    margin: 10px;
+    flex-grow: 1;
+    display: none;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.8); /* Ajoutez cet attribut */
+}
+
+.testimonial.main {
+    flex-grow: 2;
+    max-width: 400px;
+    display: block;
+    transform: scale(1); /* Ajoutez cet attribut */
+}
+
+.testimonial-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-name {
+    font-weight: bold;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="testimonial-container">
+        <div class="testimonial" style="box-shadow:1px 1px 1px 20px #DDDDDD ;">
+            <img src="image1.jpg" alt="Image Témoin 1" class="testimonial-image">
+            <div class="testimonial-content">
+                <p class="testimonial-name">John Doe</p>
+                <p class="testimonial-profession">Designer</p>
+                <p class="testimonial-text">"Témoignage 1. Ce site est incroyable!"</p>
+            </div>
+        </div>
+        <div class="testimonial">
+            <img src="image2.jpg" alt="Image Témoin 2" class="testimonial-image">
+            <div class="testimonial-content">
+                <p class="testimonial-name">Jane Smith</p>
+                <p class="testimonial-profession">Développeur</p>
+                <p class="testimonial-text">"Témoignage 2. J'adore ce service!"</p>
+            </div>
+        </div>
+        <div class="testimonial">
+            <img src="image3.jpg" alt="Image Témoin 3" class="testimonial-image">
+            <div class="testimonial-content">
+                <p class="testimonial-name">Robert Johnson</p>
+                <p class="testimonial-profession">Artiste</p>
+                <p class="testimonial-text">"Témoignage 3. Le meilleur site professionnel!"</p>
+            </div>
+        </div>
+        <div class="testimonial">
+            <img src="image1.jpg" alt="Image Témoin 1" class="testimonial-image">
+            <div class="testimonial-content">
+                <p class="testimonial-name">John Doe</p>
+                <p class="testimonial-profession">Designer</p>
+                <p class="testimonial-text">"Témoignage 1. Ce site est incroyable!"</p>
+            </div>
+        </div>
+        <div class="testimonial">
+            <img src="image2.jpg" alt="Image Témoin 2" class="testimonial-image">
+            <div class="testimonial-content">
+                <p class="testimonial-name">Jane Smith</p>
+                <p class="testimonial-profession">Développeur</p>
+                <p class="testimonial-text">"Témoignage 2. J'adore ce service!"</p>
+            </div>
+        </div>
+        <div class="testimonial">
+            <img src="image3.jpg" alt="Image Témoin 3" class="testimonial-image">
+            <div class="testimonial-content">
+                <p class="testimonial-name">Robert Johnson</p>
+                <p class="testimonial-profession">Artiste</p>
+                <p class="testimonial-text">"Témoignage 3. Le meilleur site professionnel!"</p>
+            </div>
+        </div>
+    </div>
+    <div class="controls">
+        <button id="prev">Précédent</button>
+        <button id="next">Suivant</button>
+    </div>
+    <script>
+        const testimonials = document.querySelectorAll('.testimonial');
+let currentIndex = 0;
+let intervalId;
+
+function showTestimonials(index) {
+    testimonials.forEach((testimonial, i) => {
+        if (i >= index && i < index + 3) {
+            testimonial.style.display = 'block';
+            if (i === index + 1) {
+                testimonial.style.transform = 'scale(1)';
+            } else {
+                testimonial.style.transform = 'scale(0.8)';
+            }
+        } else {
+            testimonial.style.display = 'none';
+        }
+    });
+}
+
+function nextTestimonial() {
+    currentIndex = (currentIndex + 1) % (testimonials.length - 2);
+    showTestimonials(currentIndex);
+}
+
+function prevTestimonial() {
+    currentIndex = (currentIndex - 1 + (testimonials.length - 2)) % (testimonials.length - 2);
+    showTestimonials(currentIndex);
+}
+
+// pour témoignage toutes les 5 secondes
+startAutomaticScroll();
+
+function startAutomaticScroll() {
+    intervalId = setInterval(() => {
+        nextTestimonial();
+    }, 5000); // Change de témoignage toutes les 5 secondes
+}
+
+// Affiche les témoignages dès que la page se charge
+showTestimonials(currentIndex);
+
+// Démarre le défilement automatique après un court délai (par exemple, 2 secondes)
+setTimeout(() => {
+    startAutomaticScroll();
+}, 2000);
+
+document.getElementById('next').addEventListener('click', () => {
+    nextTestimonial();
+    clearInterval(intervalId); // Arrête le défilement automatique lorsque l'utilisateur clique
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+    prevTestimonial();
+    clearInterval(intervalId); // Arrête le défilement automatique lorsque l'utilisateur clique
+});
+
+    </script>
+</body>
+</html>
