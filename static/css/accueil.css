@@ -1,14 +1,11 @@
 
-
-/* Styles généraux */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /* overflow: hidden; Empêche les défilements inutiles */
 }
 
-/* Style pour le tableau de bord */
+/* tableau de bord */
 .tableau-de-bord {
     display: flex;
     justify-content: space-between;
@@ -18,12 +15,12 @@ body {
     color: white;
 }
 
-/* Style pour le logo */
+/*logo */
 .logo img {
     width: 50px;
 }
 
-/* Style pour le menu */
+/* menu */
 .menu ul {
     list-style: none;
     display: flex;
@@ -40,7 +37,7 @@ body {
     color: white;
 }
 
-/* Style pour les boutons */
+/* boutons */
 .boutons button {
     background-color: #65C0FF;
     color: white;
@@ -55,9 +52,9 @@ body {
 }
 
 
-/* Style pour chaque carré */
+/*  carrés */
 .carre {
-    width: 23%; /* Ajustez la largeur selon vos préférences */
+    width: 23%;
     height: 100px;
     background-color: #007BFF;
     color: white;
@@ -65,13 +62,11 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
-
-/* Style pour le texte dans chaque carré */
 .texte-carre {
     position: absolute;
-    bottom: 10px; /* Ajustez la distance depuis le bas de l'image */
-    left: 10px; /* Ajustez la distance depuis la gauche de l'image */
-    right: 10px; /* Ajustez la distance depuis la droite de l'image */
+    bottom: 10px;
+    left: 10px; 
+    right: 10px; 
 }
 
 .texte-carre h2 {
@@ -84,7 +79,7 @@ body {
     margin: 0;
 }
 
-/* Style pour la superposition de texte */
+/* superposition de texte */
 .superposition-texte {
     text-align: center;
 }
@@ -95,7 +90,6 @@ body {
     margin-top: 230px;
 }
 
-/* Style pour le bouton "Commencer" */
 .bouton-commencer {
     background-color: #007BFF;
     color: white;
@@ -103,9 +97,8 @@ body {
     border-radius: 20px;
     border: 1px solid #007BFF;
     cursor: pointer;
-    margin-top: 30px; /* Ajoute de l'espace entre le texte et le bouton */
+    margin-top: 30px; 
 }
-
 .bouton-commencer:hover {
     background-color: #65bfff75;
 }
@@ -147,15 +140,11 @@ body {
     cursor: pointer;
 }
 
-/* Styles pour le bouton Commencer */
 .bouton-commencer:hover {
     background-color: #65bfff75;
 }
 
 /* A propos */
-/* *{
-    border: 1px solid;
-} */
 
 .contenu-accueil {
     width: 60%;
@@ -212,8 +201,6 @@ body {
     background-color: #65C0FF;
     width: auto;
     height: 450px;
-    /* align-items: center;
-    justify-content: center; */
     text-align: center;
     padding: 10px;
 }
@@ -296,9 +283,8 @@ body {
     color: black;
 }
 /* temoignages */
-.temoignage{
+.grande_div_temoignage{
     text-align: center;
-    border: 1px solid;
     align-items: center;
     justify-content: center;
 }
@@ -308,27 +294,85 @@ body {
     align-items: center;
 }
 .p_temoignage{
-    width: 110px;
+    width: 100px;
     border-radius: 32px;
     border: 1px solid #777777;
     padding: 2px;
     color: #007BFF;
 }
-.temoins{
+
+.temoignage-div {
     display: flex;
-    align-items: center;
     justify-content: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-height: 400px;
+    overflow: hidden;
 }
-.temoin1{
-    width: 300px;
-    height: 250px;
+
+.temoignage {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px 15px #DDDDDD;
+    padding: 20px;
+    max-width: 400px;
+    margin: 10px;
+    flex-grow: 1;
+    display: none;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.8);
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center; 
 }
-.temoin2{
-    width: 400px;
-    height: 250px;
+
+
+.bouton_next {
+    margin-top: 20px;
 }
-.temoin3{
-    width: 300px;
-    height: 250px;
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
 }
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/*icônes */
+.bouton_next i {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #007BFF;
+    border: 1px solid;
+    padding: 7px;
+    border-radius: 20px;
+    width: 25px;
+}
+
+.bouton_next i:hover {
+    color: #007BFF;
+}
+.nom_prof_img{
+display: flex;
+color: #777777;
+text-align: justify;
+}
+.nom_prof_img p{
+margin: 3px;
+}
+.temoignage img {
+border: 1px solid;
+border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
