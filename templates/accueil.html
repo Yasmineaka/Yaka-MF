@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
+    <!-- tableau de bord -->
     <div class="tableau-de-bord">
         <div class="logo">
             <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
@@ -33,6 +34,7 @@
             </div>
         </section>
     </section>
+    <!-- quelques informations concernant la plateforme -->
     <div class="contenu-accueil">
        <p style="color: white;"> Vous trouverez après inscription:</p>
         <div style="display: flex;" class="contenu-texte">
@@ -70,7 +72,7 @@
             </div>
         </div>
     </div>
-  
+  <!-- A propos de nous -->
     <div class='apropos'>
         <section>
         <img class="img_apropos" src="../img/meeting-5395615_1280.jpg" alt="" class="image">
@@ -97,6 +99,7 @@
         </section>
         <button class="savoir_plus"><a href="">En savoir plus</a></button>
     </div>
+    <!-- cours d'initiation a notre plateforme -->
     <div class="grande-div-cours">
         <div class="div-cours">
             <p> 1er cours : initiation à la finance et aux différentes <br>
@@ -104,6 +107,7 @@
             <button class="cours-button"><a href="">Cliquez ici</a></button>
         </div> 
     </div> 
+    <!-- temoignages -->
     <div class="grande_div_temoignage">
         <div class="div_p_temoignage">
             <p class="p_temoignage">Témoignage</p>
@@ -176,6 +180,70 @@
             <i id="next" class="fas fa-chevron-right"></i>
         </div>
     </div>
+    <!-- contactez-nous -->
+    <section>
+        <h2 style="text-align: center;  font-family: 'Franklin Gothic Medium';color: #007BFF;">Contactez-nous</h2>
+
+        <div class="contact-div">
+            <div class="contact-info">
+                <h4>Adresse et Contact</h4>
+                <p>Appelez-Nous <br>0759152201/0585825774</p>
+                <p>Localisation <br>Côte d’ivoire <br>Abidjan, cocody angré gestoci</p>
+                <p>Heure de travail <br>Lun-vend 08:30 - 20:30 <br>Sam-dim 09:00 - 18:00</p>
+            </div>
+    
+            <div class="contact-form">
+                <h4>Formulaire de Contact</h4>
+                <form action="traitement_formulaire.php" method="post">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required><br>
+    
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required><br>
+    
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="4"  required></textarea><br>
+    
+                    <button class="button-envoyer" type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-logo">
+            <img src="votre-logo.png" alt="Logo">
+            <h3>Votre satisfaction <br> notre priorité, <br>sécurité garantie</h3>
+        </div>
+        <div class="footer-menu">
+            <h3>Menu 1</h3>
+            <ul>
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-menu">
+            <h3>Menu 2</h3>
+            <ul>
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+            </ul>
+        </div>
+        <div style="display: block; margin: 20px;">
+            <p style="display: block;">Recevoir des notifications</p>
+            <div class="email">
+                <input type="email" class="email-input" placeholder="Entrez votre email">
+                <button class="email-bouton">S'inscrire</button>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>            
+            </div>
+        </div>
+    </footer>
     <script src="../static/js/accueil.js"></script>
 </body>
 </html>
