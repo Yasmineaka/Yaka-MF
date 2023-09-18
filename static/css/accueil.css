@@ -6,7 +6,7 @@ body {
     background: #F5F5F5;
 }
 
-/* tableau de bord */
+
 .tableau-de-bord {
     display: flex;
     justify-content: space-between;
@@ -16,7 +16,6 @@ body {
     color: white;
 }
 
-/*logo */
 .logo img {
     width: 50px;
 }
@@ -116,6 +115,7 @@ body {
     width: 100%;
     height: 500px;
     background-size: cover;
+    object-fit: cover;
 }
 
 .superposition-texte {
@@ -145,7 +145,7 @@ body {
     background-color: #65bfff75;
 }
 
-/* A propos */
+/* A propos 1*/
 
 .contenu-accueil {
     width: 60%;
@@ -161,6 +161,7 @@ body {
 }
 .contenu-texte {
     margin-top: 20px;
+    max-width: 100%;
 }
 .texte-box{
     background: white;
@@ -188,6 +189,7 @@ body {
     background-color: #65bfff75;
 }
 
+/* A propos2 */
 .apropos{
     position: relative;
     background: #65C0FF;
